@@ -1,38 +1,72 @@
+/* 
+use this for later to find colors for each of the color
+https://bulbapedia.bulbagarden.net/wiki/Category:Type_color_templates 
+*/
+
+:root {
+  --clr-background: #2E3440;
+  --clr-txt: #ECEFF4;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
+  background-color: var(--clr-background);
+  color: var(--clr-txt);
+
+}
+
+/* SEARCH RESULT CARDS */
+.Card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  width: 50%;
+
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 10px;
+
+  text-decoration: none;
+  border-radius: 10px;
+  color: #ECEFF4;
+  background-color: #3B4252;
 }
 
-.App-link {
-  color: #61dafb;
+/* POKEMON INFO PAGE */
+.container {
+  display: grid;
+  grid-template-columns: 30% 30%;
+  justify-content: center;
+  gap: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.infoPageTitle {
+  grid-column: 1 / 3;
 }
+
+.infoPagePicture {
+  border-radius: 10px;
+  max-width:100%;
+  height: auto;
+}
+
+.bug {background-color: #A8B820;}
+.dark {background-color: #705848;}
+.dragon {background-color: #7038F8;}
+.eletric {background-color: #F8D030;}
+.fairy {background-color: #EE99AC;}
+.fighting {background-color: #C03028;}
+.fire {background-color: #F08030;}
+.flying {background-color: #A890F0;}
+.ghost {background-color: #705898;}
+.grass {background-color: #78C850;}
+.ground {background-color: #E0C068;}
+.ice {background-color: #98D8D8;}
+.normal {background-color: #A8A878;}
+.poison {background-color: #A040A0;}
+.psychic {background-color: #F85888;}
+.rock {background-color: #B8A038;}
+.steel {background-color: #B8B8D0;}
+.water {background-color: #6890F0;}
