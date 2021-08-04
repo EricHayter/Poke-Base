@@ -2144,7 +2144,7 @@ let pokemonData = [
       "sp_defense": 45,
       "speed": 90,
       "type1": "ground",
-      "type2": "ground",
+      "type2": "",
       "weight_kg": "",
       "generation": 1,
       "is_legendary": 0
@@ -2187,7 +2187,7 @@ let pokemonData = [
       "sp_defense": 70,
       "speed": 110,
       "type1": "ground",
-      "type2": "ground",
+      "type2": "",
       "weight_kg": "",
       "generation": 1,
       "is_legendary": 0
@@ -3778,7 +3778,7 @@ let pokemonData = [
       "sp_defense": 50,
       "speed": 25,
       "type1": "poison",
-      "type2": "poison",
+      "type2": "",
       "weight_kg": "",
       "generation": 1,
       "is_legendary": 0
@@ -3821,7 +3821,7 @@ let pokemonData = [
       "sp_defense": 100,
       "speed": 50,
       "type1": "poison",
-      "type2": "poison",
+      "type2": "",
       "weight_kg": "",
       "generation": 1,
       "is_legendary": 0
@@ -21150,7 +21150,7 @@ let pokemonData = [
       "sp_defense": 75,
       "speed": 127,
       "type1": "grass",
-      "type2": "grass",
+      "type2": "",
       "weight_kg": 2.1,
       "generation": 4,
       "is_legendary": 1
@@ -23859,7 +23859,7 @@ let pokemonData = [
       "sp_defense": 105,
       "speed": 55,
       "type1": "fire",
-      "type2": "fire",
+      "type2": "",
       "weight_kg": 92.9,
       "generation": 5,
       "is_legendary": 0

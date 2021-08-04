@@ -1,8 +1,3 @@
-/* 
-use this for later to find colors for each of the color
-https://bulbapedia.bulbagarden.net/wiki/Category:Type_color_templates 
-*/
-
 :root {
   --clr-background: #2E3440;
   --clr-txt: #ECEFF4;
@@ -52,21 +47,23 @@ https://bulbapedia.bulbagarden.net/wiki/Category:Type_color_templates
   height: auto;
 }
 
-.bug {background-color: #A8B820;}
-.dark {background-color: #705848;}
-.dragon {background-color: #7038F8;}
-.eletric {background-color: #F8D030;}
-.fairy {background-color: #EE99AC;}
-.fighting {background-color: #C03028;}
-.fire {background-color: #F08030;}
-.flying {background-color: #A890F0;}
-.ghost {background-color: #705898;}
-.grass {background-color: #78C850;}
-.ground {background-color: #E0C068;}
-.ice {background-color: #98D8D8;}
-.normal {background-color: #A8A878;}
-.poison {background-color: #A040A0;}
-.psychic {background-color: #F85888;}
-.rock {background-color: #B8A038;}
-.steel {background-color: #B8B8D0;}
-.water {background-color: #6890F0;}
+.statName { display: inline-block; width: 80px; }
+
+.bug {background-color: #A8B820; width: 100px; text-align: center;}
+.dark {background-color: #705848; width: 100px; text-align: center;}
+.dragon {background-color: #7038F8; width: 100px; text-align: center;}
+.electric {background-color: #F8D030; width: 100px; text-align: center;}
+.fairy {background-color: #EE99AC; width: 100px; text-align: center;}
+.fighting {background-color: #C03028; width: 100px; text-align: center;}
+.fire {background-color: #F08030; width: 100px; text-align: center;}
+.flying {background-color: #A890F0; width: 100px; text-align: center;}
+.ghost {background-color: #705898; width: 100px; text-align: center;}
+.grass {background-color: #78C850; width: 100px; text-align: center;}
+.ground {background-color: #E0C068; width: 100px; text-align: center;}
+.ice {background-color: #98D8D8; width: 100px; text-align: center;}
+.normal {background-color: #A8A878; width: 100px; text-align: center;}
+.poison {background-color: #A040A0; width: 100px; text-align: center;}
+.psychic {background-color: #F85888; width: 100px; text-align: center;}
+.rock {background-color: #B8A038; width: 100px; text-align: center;}
+.steel {background-color: #B8B8D0; width: 100px; text-align: center;}
+.water {background-color: #6890F0; width: 100px; text-align: center;}
