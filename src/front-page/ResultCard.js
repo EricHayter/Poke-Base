@@ -3,7 +3,7 @@ import urlFixer from "./utilFunctions.js";
 import "../App.css";
 import { Link } from "react-router-dom"
 
-class ResultCard extends React.Component {
+export default class ResultCard extends React.Component {
   render() {
     let pokemonName = this.props.pokemon.name;
 
@@ -15,10 +15,8 @@ class ResultCard extends React.Component {
           )}.png`}
           alt={pokemonName}
         ></img>
-        <p>{pokemonName}</p>
+        <p className={"CardTitle"}>{pokemonName}</p>
       </Link>
     );
   }
 }
-
-export { ResultCard };

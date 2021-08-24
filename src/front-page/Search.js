@@ -1,56 +1,89 @@
 import React from "react";
-import { connect } from "react-redux";
-import { searchAction } from "../misc/store.js";
+import "../App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import SearchResult from "./searchResult.js";
 
-class Search extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      input: "",
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+export default class Search extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			input: "",
+			search: {
+				name: "",
+				types: [],
+			},
+			advancedSearch: false,
+		};
+		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+		this.searchToggle = this.searchToggle.bind(this);
+	}
 
-  handleChange(e) {
-    this.setState({
-      input: e.target.value,
-    });
-  }
+	handleChange(e) {
+		this.setState({
+			input: e.target.value,
+		});
+	}
 
-  handleSubmit(e) {
-    e.preventDefault();
-    this.setState({
-      input: "",
-    });
-    this.props.newSearch(this.state.input);
-  }
+	searchToggle() {
+		this.setState((state) => {
+			if (state.advancedSearch) {
+				return { advancedSearch: false };
+			} else {
+				return { advancedSearch: true };
+			}
+		});
+	}
 
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <input
-          value={this.state.input}
-          type="text"
-          onChange={this.handleChange}
-        ></input>
-        <button type="submit" onClick={this.handleSubmit}>
-          Search
-        </button>
-      </form>
-    );
-  }
+	handleSubmit(e) {
+		e.preventDefault();
+		this.setState({
+			input: "",
+			search: {
+				name: this.state.input,
+			},
+		});
+	}
+
+	render() {
+		const searchIcon = <FontAwesomeIcon icon={faSearch} />;
+
+		return (
+			<div>
+				<form
+					onSubmit={this.handleSubmit}
+					className={"Search"}
+				>
+					<input
+						className={"SearchBar"}
+						value={this.state.input}
+						type="text"
+						onChange={this.handleChange}
+					></input>
+
+					<button
+						className={"SearchButton"}
+						onClick={this.searchToggle}
+					>
+						Advanced
+					</button>
+					<button
+						type="submit"
+						className={"SearchButton"}
+						onClick={this.handleSubmit}
+					>
+						{searchIcon}
+					</button>
+				</form>
+				{this.state.advancedSearch ? (
+					<div>
+						<h1>SEX</h1>
+					</div>
+				) : null}
+
+				<SearchResult search={this.state.search} />
+			</div>
+		);
+	}
 }
-
-//connect redux to component
-const mapDispatchToProps = (dispatch) => {
-  return {
-    newSearch: (search) => {
-      dispatch(searchAction(search));
-    },
-  };
-};
-
-Search = connect(null, mapDispatchToProps)(Search);
-
-export { Search };
