@@ -21,8 +21,6 @@ export default function TypeEffectiveness(props) {
 		}
 	});
 
-	console.log(weakAgainst.length);
-
 	return (
 		<div>
 			<h2>type effectiveness</h2>
