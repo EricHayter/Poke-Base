@@ -1,5 +1,5 @@
 import React from "react";
-import urlFixer from "./utilFunctions";
+import { pad } from "./utilFunctions";
 import { useParams } from "react-router-dom";
 import pokemonData from "../db.js";
 import "../App.css";
@@ -29,9 +29,9 @@ const PokemonPage = (props) => {
 				<div>
 					<img
 						className={"infoPagePicture"}
-						src={`https://img.pokemondb.net/artwork/large/${urlFixer(
-							pokemon.name
-						)}.jpg`}
+						src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${
+							pad(pokemon.pokedex_number ,3)
+						}.png`}
 						alt={pokemon.name}
 					></img>
 					<div className={"PokemonTypes"}>

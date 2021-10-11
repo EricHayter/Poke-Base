@@ -1,5 +1,5 @@
 import React from "react";
-import urlFixer from "./utilFunctions.js";
+import { urlFixer } from "./utilFunctions.js";
 import "../App.css";
 import { Link } from "react-router-dom"
 
