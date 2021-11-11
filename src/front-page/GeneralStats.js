@@ -3,7 +3,7 @@ import "../App.css";
 
 export default function GeneralStats(props) {
 	return (
-		<div>
+		<div className={"generalStats"}>
 			<h2 className={"PokemonStatTitle"}>General Stats</h2>
 			<p className={"PokemonStat"}>
 				<span className={"statName"}>Weight (kg):</span>{" "}

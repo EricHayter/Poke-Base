@@ -99,6 +99,7 @@ padding: 0;
 	max-width: max-content;
 }
 
+
 .container {
 	display: grid;
 	grid-template-columns: 600px 400px;
@@ -136,10 +137,10 @@ padding: 0;
 }
 
 .infoPagePicture {
-	border-radius: 10px;
-	max-width: 100%;
+	border-radius: 2%;
+	width: 100%;
 	height: auto;
-	background-color: #FFF;
+	background-color: #ECEFF4;
 }
 
 .statName {
