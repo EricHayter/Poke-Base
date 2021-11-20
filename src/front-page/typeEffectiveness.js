@@ -23,7 +23,7 @@ export default function TypeEffectiveness(props) {
 
 	return (
 		<div>
-			<h2>type effectiveness</h2>
+			<h2>Type Effectiveness</h2>
 			<h3>Weak Against</h3>
 			<div className={"PokemonTypes"}>
 				{weakAgainst.map((type) => (

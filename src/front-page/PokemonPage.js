@@ -58,8 +58,9 @@ const PokemonPage = (props) => {
             <span className={"statName"}>Speed:</span> {pokemon.speed}
           </p>
           <GeneralStats pokemon={pokemon} />
+          <TypeEffectiveness pokemon={pokemon} />
         </div>
-        <TypeEffectiveness pokemon={pokemon} />
+        
       </div>
     </div>
   );
