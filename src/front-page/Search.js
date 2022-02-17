@@ -4,13 +4,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import SearchResult from "./searchResult.js";
 
+const TYPES = ['Bug', 'Dark', 'Dragon', 'Electric', 'Fairy', 'Fairy', 'Fighting', 'Fire',
+  'Flying', 'Ghost', 'Grass', 'Ground', 'Ice', 'Normal', 'Poison', 'Psychic',
+  'Rock', 'Steel', 'Water']
+
 export default class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       input: "",
       name: "",
-      types: ["fire","water"],
+      types: [],
       advancedSearch: false,
     };
     this.handleChange = this.handleChange.bind(this);
@@ -37,15 +41,34 @@ export default class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.setState({
-      ...this.state,
-      name: this.state.input,
-      input: "",
-    });
+
+
+    if (this.state.advancedSearch) {
+      let checked = [];
+      for (let i = 0; i < TYPES.length; i++) {
+        if (document.getElementById(TYPES[i]).checked === true) {
+          checked.push(TYPES[i].toLowerCase());
+        }
+      }
+
+      this.setState({
+        ...this.state,
+        types: checked
+      })
+    } else {
+      this.setState({
+        ...this.state,
+        name: this.state.input,
+        input: "",
+      });
+    }
+
+    console.log(this.state);
   }
 
   render() {
     const searchIcon = <FontAwesomeIcon icon={faSearch} />;
+
 
     return (
       <div>
@@ -57,6 +80,10 @@ export default class Search extends React.Component {
             onChange={this.handleChange}
           ></input>
 
+          <button type="button" className={"SearchButton"} onClick={this.searchToggle}>
+            Advanced
+          </button>
+
           <button
             type="submit"
             className={"SearchButton"}
@@ -64,16 +91,24 @@ export default class Search extends React.Component {
           >
             {searchIcon}
           </button>
-          <button className={"SearchButton"} onClick={this.searchToggle}>
-            Advanced
-          </button>
+
+          <h1 style={{color: "black"}}>{this.state.types}</h1>
+
+          {this.state.advancedSearch ? (
+            <div className="AdvancedSearchMenu">
+              {TYPES.map((n) => {
+                if (this.state.types.indexOf(n.toLowerCase()) !== -1) {
+                  return <label className="TypeFilter"><input type="checkbox" id={n} defaultChecked></input> {n} </label>
+                } else {
+                  return <label className="TypeFilter"><input type="checkbox" id={n}></input> {n} </label>
+                }
+                
+              })}
+            </div>
+          ) : null}
         </form>
 
-        {this.state.advancedSearch ? (
-          <div>
-            <h1>SEX</h1>
-          </div>
-        ) : null}
+
 
         <SearchResult search={this.state} />
       </div>
