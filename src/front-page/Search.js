@@ -53,7 +53,9 @@ export default class Search extends React.Component {
 
       this.setState({
         ...this.state,
-        types: checked
+        types: checked,
+        name: this.state.input,
+        input: "",
       })
     } else {
       this.setState({
@@ -92,8 +94,6 @@ export default class Search extends React.Component {
             {searchIcon}
           </button>
 
-          <h1 style={{color: "black"}}>{this.state.types}</h1>
-
           {this.state.advancedSearch ? (
             <div className="AdvancedSearchMenu">
               {TYPES.map((n) => {
@@ -102,7 +102,7 @@ export default class Search extends React.Component {
                 } else {
                   return <label className="TypeFilter"><input type="checkbox" id={n}></input> {n} </label>
                 }
-                
+
               })}
             </div>
           ) : null}
