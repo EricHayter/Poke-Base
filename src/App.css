@@ -70,6 +70,18 @@ padding: 0;
 	color: var(--clr-background);
 }
 
+.TypeFilter {
+	color: var(--clr-txt);
+}
+
+.AdvancedSearchMenu {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	background-color: var(--clr-background);
+	border-radius: 5px;
+	padding: 5px;
+}
+
 /* SEARCH RESULT CARDS */
 .Card {
 	display: flex;
