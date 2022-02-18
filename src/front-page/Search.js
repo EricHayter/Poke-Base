@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import SearchResult from "./searchResult.js";
 
-const TYPES = ['Bug', 'Dark', 'Dragon', 'Electric', 'Fairy', 'Fairy', 'Fighting', 'Fire',
+const TYPES = ['Bug', 'Dark', 'Dragon', 'Electric', 'Fairy', 'Fighting', 'Fire',
   'Flying', 'Ghost', 'Grass', 'Ground', 'Ice', 'Normal', 'Poison', 'Psychic',
   'Rock', 'Steel', 'Water']
 
@@ -74,6 +74,11 @@ export default class Search extends React.Component {
 
     return (
       <div>
+        <div className="MainHeader">
+          <img src="https://seeklogo.com/images/P/pokeball-logo-DC23868CA1-seeklogo.com.png" alt="pokemon logo" className="Logo"></img>
+          <h1 className="MainTitle">Poké-Base</h1>
+        </div>
+
         <form onSubmit={this.handleSubmit} className={"Search"}>
           <input
             className={"SearchBar"}
