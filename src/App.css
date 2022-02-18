@@ -23,6 +23,26 @@ padding: 0;
 	margin: auto;
 }
 
+/* Main Header */
+.MainHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	justify-content: center;
+	margin: 15px;
+	gap: 20px;
+}
+
+.MainTitle {
+	font-size: 4em;
+	font-weight: 400;
+}
+
+.Logo {
+	width: auto;
+	height: 60px;
+}
+
 /* Search Bar */
 .Search {
 	margin: auto;
@@ -33,6 +53,7 @@ padding: 0;
 }
 
 .SearchBar {
+	margin-left: 5px;
 	border: 0;
 	background-color: var(--clr-background-secondary);
 	color: var(--clr-txt);
@@ -159,6 +180,14 @@ padding: 0;
 .statName {
 	display: inline-block;
 	width: 150px;
+}
+
+.Male {
+	color: #89CFF0;
+}
+
+.Female {
+	color:  #ffb6c1;
 }
 
 .bug {
