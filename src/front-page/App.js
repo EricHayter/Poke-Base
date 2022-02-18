@@ -7,11 +7,11 @@ export default function App() {
 	return (
 		<BrowserRouter>
 			<Switch>
-				<Route path="/" exact>
+				<Route path="/Poke-Base/" exact>
 					<Search />
 				</Route>
 				<Route
-					path="/pokemon/:id"
+					path="/Poke-Base/pokemon/:id"
 					component={PokemonPage}
 				/>
 				<Route path="/" render={() => <div>404</div>} />

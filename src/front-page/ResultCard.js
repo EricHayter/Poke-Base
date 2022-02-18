@@ -8,7 +8,7 @@ export default class ResultCard extends React.Component {
     let pokemonName = this.props.pokemon.name;
 
     return (
-      <Link to={`/pokemon/${pokemonName}`} className={"Card"}>
+      <Link to={`/Poke-Base/pokemon/${pokemonName}`} className={"Card"}>
         <img
           src={`https://img.pokemondb.net/sprites/sword-shield/icon/${urlFixer(
             pokemonName
