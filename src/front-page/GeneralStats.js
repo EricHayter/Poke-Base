@@ -18,9 +18,9 @@ export default function GeneralStats(props) {
 				{props.pokemon.generation}
 			</p>
 			<p className={"PokemonStat"}>
-				<span className={"statName"}>
-					Gender Ratio:
-				</span>{" "}
+			<span className={"statName"}>Gender Ratio:</span>{" "}
+				<span className="Male">{parseInt(props.pokemon.percentage_male) + " "}</span>
+				<span className="Female">{100 - parseInt(props.pokemon.percentage_male)}</span>
 			</p>
 			<p className={"PokemonStat"}>
 				<span className={"statName"}>Abilities:</span>{" "}
