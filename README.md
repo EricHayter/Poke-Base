@@ -1,7 +1,8 @@
 # Poké-Base
 
-## What is This Project?
-this project allows for easy access of pokemon data and stats. This was a first attempt at a react application just to learn the ins and outs of React.
+<img src="https://www.freeiconspng.com/thumbs/pokeball-png/file-pokeball-png-0.png"></img>
 
-## What Technologies Were Used?
-This project used: React, React Router, Redux and React Redux
+## What is This Project?
+Poké-Base is an online web application that displays useful information on a wide range of Pokémon all the way up to generation 6. The project sports a simple and minimal UI using the <a href="https://www.nordtheme.com/">norde color scheme</a>.
+
+## Images of the Site
