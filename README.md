@@ -1,8 +1,5 @@
 # Poké-Base
 
-<img src="https://www.freeiconspng.com/thumbs/pokeball-png/file-pokeball-png-0.png"></img>
-
-## What is This Project?
-Poké-Base is an online web application that displays useful information on a wide range of Pokémon all the way up to generation 6. The project sports a simple and minimal UI using the <a href="https://www.nordtheme.com/">norde color scheme</a>.
-
-## Images of the Site
+This is a small javascript project that I made using react. 
+It's a simple catalogue of data for pokemon and allows users to make specific queries on type, legendary status, and name. 
+Check out the project ![here](https://www.erichayter.com/Poke-Base/)!
